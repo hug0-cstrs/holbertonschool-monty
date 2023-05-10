@@ -10,7 +10,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define DELIMITERS " \n\t\r"
+#define DELIMITERS " \n$"
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
