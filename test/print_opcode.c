@@ -19,13 +19,20 @@ void pall(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 	}
 }
 
+/**
+ * pint - prints the value at the top of the stack
+ * @stack: pointer to stack
+ * @line_number: instruction's line number
+ * Description: This function prints the value at the top of the stack, without
+ * modifying the stack.
+ */
 void pint(stack_t **stack, unsigned int line_number)
 {
 	int value;
 
 	if (stack == NULL || *stack == NULL)
 	{
-		fprintf(stderr,"L%d: can't pint, stack empty", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
 		exit(EXIT_FAILURE);
 	}
 	value = (*stack)->n;
