@@ -54,7 +54,7 @@ void swap(stack_t **stack, unsigned int line_number);
 int get_op_code(char *opcode, stack_t **stack, unsigned int line_number);
 
 /* calcualte opcodes */
-
+int is_number(char *str);
 
 /* free memory functions */
 void free_all(stack_t **stack, char *line, FILE *fp);

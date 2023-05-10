@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	line_number = 0;
-	while ((read = getline(&line, &len, fp) != -1))
+	while ((read = getline(&line, &len, fp)) != -1)
 	{
 		line_number++;
 		opcode = strtok(line, DELIMITERS);
@@ -69,6 +69,9 @@ void free_all(stack_t **stack, char *line, FILE *fp)
  */
 void free_stack(stack_t **stack)
 {
+	if (stack == NULL || *stack  == NULL)
+		return;
+
 	stack_t *current;
 
 	while (*stack != NULL)
