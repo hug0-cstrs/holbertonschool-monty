@@ -8,55 +8,73 @@
  */
 int main(int argc, char **argv)
 {
-    FILE *fp;                             /* pointeur vers un fichier */
-    stack_t *stack = NULL;                /* pointeur vers la pile */
-    char *line = NULL, *opcode, *n;       /* pointeurs vers des chaînes de caractères */
-    unsigned int line_number;             /* numéro de ligne */
-    size_t len = 0;                       /* longueur de la ligne lue */
-    ssize_t read;                         /* nombre de caractères lus */
+	FILE *fp;
+	stack_t *stack = NULL;
+	char *line = NULL, *opcode, *n;
+	unsigned int line_number;
+	size_t len = 0;
+	ssize_t read;
 
-    /* Vérification que le nombre d'arguments est correct */
-    if (argc != 2)
-    {
-        fprintf(stderr, "USAGE: monty file\n");
-        exit(EXIT_FAILURE);
-    }
+	if (argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	fp = fopen(argv[1], "r");
+	if (fp == NULL)
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		exit(EXIT_FAILURE);
+	}
+	line_number = 0;
+	while ((read = getline(&line, &len, fp) != -1))
+	{
+		line_number++;
+		opcode = strtok(line, DELIMITERS);
+		if (opcode == NULL)
+			continue;
 
-    /* Ouverture du fichier en lecture */
-    fp = fopen(argv[1], "r");
-    if (fp == NULL)
-    {
-        fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-        exit(EXIT_FAILURE);
-    }
+		if (strcmp(opcode, "push") == 0)
+		{
+			n = strtok(NULL, DELIMITERS);
+			push(&stack, line_number, n);
+		}
+		else
+			get_op_code(opcode, &stack, line_number);
+	}
+	free_all(&stack, line, fp);
+	return (EXIT_SUCCESS);
+}
 
-    /* Initialise le numéro de ligne */
-    line_number = 0;
+/**
+ * free_all - frees all allocated memory
+ * @stack: pointer to stack
+ * @line: pointer to line buffer
+ * @fp: file pointer
+ * Description: This function frees all allocated memory for the stack, line
+ * buffer, and file pointer. It also closes the file.
+ */
 
-    /* Boucle pour lire de chaque ligne du fichier */
-    while ((read = getline(&line, &len, fp) != -1))
-    {
-        line_number++;
+void free_all(stack_t **stack, char *line, FILE *fp)
+{
+	if (stack != NULL)
+		free_stack(stack);
+	free(line);
+	fclose(fp);
+}
+/**
+ * free_stack - frees the top element of the stack
+ * @stack: pointer to stack
+ * Description: This function frees the memory of the top element of the stack
+ */
+void free_stack(stack_t **stack)
+{
+	stack_t *current;
 
-        /* Découpage de la ligne en opcode et argument(s) */
-        opcode = strtok(line, DELIMITERS);
-
-        /* Si la ligne est vide*/
-        if (opcode == NULL)
-		continue;
-
-        /* Si l'opcode est "push", on appelle la fonction push */
-        if (strcmp(opcode, "push") == 0)
-        {
-            n = strtok(NULL, DELIMITERS);
-            push(&stack, line_number, n);
-        }
-        /* Sinon, on appelle la fonction correspondante à l'opcode */
-        else
-            get_op_code(opcode, &stack, line_number);
-    }
-
-    /* Libération de la mémoire allouée et fermeture du fichier */
-    free_all(stack, line, fp);
-    return (EXIT_SUCCESS);
+	while (*stack != NULL)
+	{
+		current = *stack;
+		*stack = (*stack)->next;
+		free(current);
+	}
 }

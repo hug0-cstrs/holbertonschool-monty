@@ -13,8 +13,9 @@ int get_op_code(char *token, stack_t **stack, unsigned int line_number)
 
 	instruction_t operation[] = {
 	    {"pall", pall},
-	    /*{"pint", pint},
-	    {"pop", pop},*/
+	    {"pint", pint},
+	    {"pop", pop},
+	    {"swap", swap},
 	    {NULL, NULL}
 	};
 
@@ -26,6 +27,6 @@ int get_op_code(char *token, stack_t **stack, unsigned int line_number)
 			exit(EXIT_SUCCESS);
 		}
 	}
-	fprintf("stderr, L%d: unknown instruction %s\n", line_number, token);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token);
 	exit(EXIT_FAILURE);
 }

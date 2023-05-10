@@ -16,7 +16,6 @@ void push(stack_t **stack, unsigned int line_number, char *num)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
 	for (i = 0; num[i] != '\0'; i++)
 	{
 		if (num[0] == '-' && i == 0)
@@ -56,14 +55,37 @@ void push(stack_t **stack, unsigned int line_number, char *num)
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp = NULL;
+	stack_t *tmp;
 
 	if (stack == NULL || *stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+
 	tmp = (*stack)->next;
 	free(*stack);
 	*stack = tmp;
+}
+
+/**
+ * swap - swaps the top two elements of the stack
+ * @stack: pointer to stack
+ * @line_number: line number
+ */
+void swap(stack_t **stack, unsigned int line_number)
+{
+	int tmp_a, tmp_b;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	tmp_a = (*stack)->n;
+	tmp_b = (*stack)->next->n;
+
+	(*stack)->n = tmp_b;
+	(*stack)->next->n = tmp_a;
 }
