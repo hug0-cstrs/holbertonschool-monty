@@ -77,12 +77,7 @@ void _pstr(stack_t **stack, unsigned int line_number);
 void free_dlistint(stack_t *stack);
 void cleanStack(stack_t **stack);
 
-/*Help*/
-int _isdigit(char *c);
-stack_t *new_Node(int n);
+/* calcualte opcodes */
 
-/* handle_errors */
-void push_error(FILE *fd, char *line, stack_t *stack, int count);
-void ins_error(FILE *fd, char *line, stack_t *stack, char *count, int item);
 
 #endif
