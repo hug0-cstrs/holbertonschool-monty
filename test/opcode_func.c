@@ -8,50 +8,52 @@
  */
 void push(stack_t **stack, unsigned int line_number, char *num)
 {
-    stack_t *new;  /* déclare un pointeur vers une nouvelle pile */
-    int i;
+	stack_t *new;
+	int i;
 
-    /* vérifie si la valeur à ajouter est nulle */
-    if (num == NULL)
-    {
-        fprintf(stderr, "L%d: usage: push integer\n", line_number);  /* affiche un message d'erreur */
-        exit(EXIT_FAILURE);  /* quitte le programme avec un code d'erreur */
-    }
+	if (num == NULL)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
-    /* boucle pour vérifier que chaque caractère de la valeur est un chiffre */
-    for (i = 0; num[i] != '\0'; i++)
-    {
-        if (num[0] == '-' && i == 0)  /* ignore le signe négatif au début */
-            continue;
-        if (isdigit(num[i]) == 0)  /* vérifie si le caractère n'est pas un chiffre */
-        {
-            fprintf(stderr, "L%d: usage: push integer\n", line_number);  /* affiche un message d'erreur */
-            exit(EXIT_FAILURE);  /* quitte le programme avec un code d'erreur */
-        }
-    }
+	for (i = 0; num[i] != '\0'; i++)
+	{
+		if (num[0] == '-' && i == 0)
+			continue;
+		if (isdigit(num[i]) == 0)
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			exit(EXIT_FAILURE);
+		}
+	}
 
-    /* alloue de la mémoire pour la nouvelle pile */
-    new = malloc(sizeof(stack_t));
-    if (new == NULL)  /* vérifie si l'allocation de mémoire a réussi */
-    {
-        printf("Error: malloc failed\n");  /* affiche un message d'erreur */
-        exit(EXIT_FAILURE);  /* quitte le programme avec un code d'erreur */
-    }
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
+	{
+		printf("Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 
-    /* initialise la valeur de la nouvelle pile */
-    new->n = atoi(num);  /* convertit la valeur en entier */
-    new->prev = NULL;
-    new->next = NULL;
+	new->n = atoi(num);
+	new->prev = NULL;
+	new->next = NULL;
 
-    /* ajoute la nouvelle pile au sommet de la pile existante */
-    if (*stack != NULL)
-    {
-        new->next = *stack;
-        (*stack)->prev = new;
-    }
-    *stack = new;
+	if (*stack != NULL)
+	{
+		new->next = *stack;
+		(*stack)->prev = new;
+	}
+	*stack = new;
 }
 
+/**
+ * pop - removes the top element from stack
+ * @stack: pointer to stack
+ * @line_number: instruction's line number
+ * Description: This function removes the top element of the stack, updates the
+ * stack pointer, and frees the memory of the removed element.
+ */
 void pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = NULL;
