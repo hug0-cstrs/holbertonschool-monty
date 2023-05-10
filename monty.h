@@ -58,7 +58,8 @@ extern glob_t global;
 extern int value;
 
 void handle_command(char *argv);
-
+void ins_error(FILE *fd, char *line, stack_t *stack, char *count, int item);
+void push_error(FILE *fd, char *line, stack_t *stack, int count);
 int get_opc(stack_t **stack, char *arg, char *item, int count);
 
 void _push(stack_t **stack, unsigned int line_number);
@@ -76,6 +77,7 @@ void _pchar(stack_t **stack, unsigned int line_number);
 void _pstr(stack_t **stack, unsigned int line_number);
 void free_dlistint(stack_t *stack);
 void cleanStack(stack_t **stack);
+int _isdigit(char *c);
 
 /* calcualte opcodes */
 
