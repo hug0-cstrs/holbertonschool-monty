@@ -39,6 +39,9 @@ Error Handling
     monty.c: Entry point for the program. Reads the contents of the file passed as an argument and executes the commands.
     function1.c: Contains functions for push, pall, pint, free_dlistint and new_Node.
     function2.c: Contains functions for swap, pop, add, sub and nop.
+    
+ https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fwp-content%2Fqa%2Fuploads%2F2019%2F06%2Fpictorial-representation-of-stack.png&tbnid=GCT9MTxW8K4o7M&vet=12ahUKEwjjlYzQje3-AhW1rycCHeQODLsQMygGegUIARDGAQ..i&imgrefurl=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fstack-in-cpp%2F&docid=6iSJXZpGbCyUEM&w=512&h=333&q=image%20stack%20en%20c&client=firefox-b-d&ved=2ahUKEwjjlYzQje3-AhW1rycCHeQODLsQMygGegUIARDGAQ
+ 
 --- 
 ## Requirements :
 
@@ -59,11 +62,8 @@ Error Handling
 ## Compilation & Output :
 
 To compile the project, use the following command:
-$ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 
-    Any output must be printed on stdout
-    Any error message must be printed on stderr
-        Here is a link to a GitHub repository that could help you making sure your errors are printed on stderr
+$ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ---
 ### Exemple :
 
