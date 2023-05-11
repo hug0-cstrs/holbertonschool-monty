@@ -1,14 +1,14 @@
 ![image](https://github.com/hug0-cstrs/holbertonschool-monty/assets/124585936/84c7ae82-e546-4fab-9576-5482bd422cb5)
-
-##Project :
-
-#C - Stacks, Queues - LIFO, FIFO
 ---
 ##Title:
 
-#Monty bytecode interpreter
+# Monty bytecode interpreter
 ---
-##Description :
+## Project :
+
+# C - Stacks, Queues - LIFO, FIFO
+---
+## Description :
 
 Monty is a simple interpreter for the Monty bytecode language. It reads Monty files of bytecode instructions and interprets them. Monty files have the ".m" extension and contain one instruction per line. There is also an interactive mode for testing purposes.
 
@@ -39,8 +39,8 @@ Error Handling
     monty.c: Entry point for the program. Reads the contents of the file passed as an argument and executes the commands.
     function1.c: Contains functions for push, pall, pint, free_dlistint and new_Node.
     function2.c: Contains functions for swap, pop, add, sub and nop.
-    
-##Requirements :
+--- 
+## Requirements :
 
 
     Allowed editors: vi, vim, emacs
@@ -55,9 +55,8 @@ Error Handling
     Don’t forget to push your header file
     All your header files should be include guarded
     You are expected to do the tasks in the order shown in the project
-
-
-##Compilation & Output :
+---
+## Compilation & Output :
 
 To compile the project, use the following command:
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
@@ -78,3 +77,8 @@ $ ./monty bytecodes/000.m
 1
 $
 ---
+### Test :
+
+We strongly encourage you to work all together on a set of tests
+
+./monty test.m 
