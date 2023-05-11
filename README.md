@@ -57,7 +57,7 @@ Error Handling
 
 To compile the project, use the following command:
 
-$ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+`gcc -Wall -Werror -Wextra -pedantic *.c -o monty`
 ---
 ### Exemple :
 
