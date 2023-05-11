@@ -1,8 +1,8 @@
 ![image](https://github.com/hug0-cstrs/holbertonschool-monty/assets/124585936/84c7ae82-e546-4fab-9576-5482bd422cb5)
 ---
-# Title : Monty bytecode interpreter
+# Monty bytecode interpreter
 ---
-# Project : C - Stacks, Queues - LIFO, FIFO
+## Project : C - Stacks, Queues - LIFO, FIFO
 ---
 ## Description :
 
