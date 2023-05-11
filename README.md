@@ -84,8 +84,8 @@ julien@ubuntu:~/monty$ ./monty bytecodes/00.m
 julien@ubuntu:~/monty$
 
 ---
-### Test :
+### Author :
 
-We strongly encourage you to work all together on a set of tests
-
-./monty test.m 
+Hugo Castéras <6263@holbertonstudents.com> [https://github.com/hug0-cstrs]
+Alexis Grandjean <6267@holbertonstudents.com> [https://github.com/sixen31]
+lien github projet : https://github.com/hug0-cstrs/holbertonschool-monty
