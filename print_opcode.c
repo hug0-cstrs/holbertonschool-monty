@@ -46,27 +46,26 @@ void _pint(stack_t **stack, unsigned int line_number)
 
 void _pchar(stack_t **stack, unsigned int line_number)
 {
-	int value;
+	int num = 0;
 
-	if (stack == NULL || *stack == NULL)
+	if (!*stack || !stack)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
 		cleanStack(stack);
 		exit(EXIT_FAILURE);
 	}
 
-	value = (*stack)->n;
-
-	if (value < 0 || value > 127)
+	num = (*stack)->n;
+	if (num < 0 || num > 127)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 		cleanStack(stack);
 		exit(EXIT_FAILURE);
 	}
-
-	putchar(value);
+	putchar(num);
 	putchar('\n');
 }
+
 /**
  * _pstr - prints the string starting at the top of the stack
  * of the stack by the top element of the stack
@@ -76,25 +75,15 @@ void _pchar(stack_t **stack, unsigned int line_number)
 
 void _pstr(stack_t **stack, unsigned int line_number)
 {
+	stack_t *current = *stack;
 	(void)line_number;
-	int value;
-	stack_t *tmp;
 
-	if (*stack == NULL || stack == NULL)
+	while (current && current->n)
 	{
-		putchar('\n');
-		return;
-	}
-
-	tmp = *stack;
-	while (tmp)
-	{
-		value = tmp->n;
-
-		if (value <= 0 || value > 127)
+		if (current->n < 32 || current->n > 127)
 			break;
-		putchar(value);
-		tmp = tmp->next;
+		printf("%c", current->n);
+		current = current->next;
 	}
 	putchar('\n');
 }
