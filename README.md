@@ -86,7 +86,7 @@ julien@ubuntu:~/monty$
 ---
 ### Author :
 
-Hugo Castéras <6263@holbertonstudents.com> [https://github.com/hug0-cstrs]
+* **[Hugo Castéras](https://github.com/hug0-cstrs)**
 
 Alexis Grandjean <6267@holbertonstudents.com> [https://github.com/sixen31]
 
