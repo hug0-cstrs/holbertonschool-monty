@@ -31,6 +31,7 @@ cleanStack()	Cleans up the stack in case of an error
 handle_command()	Handles the commands in the bytecode file
 Error Handling
 
+
 |**Filename**|**Description**|
 |:------|:------:|
 |`calculte.c`|File containing function calculate|
@@ -42,6 +43,7 @@ Error Handling
 |`opcode_struct.c`|File content struct get_opc|
 |`print_opcode.C`|File content function _pall and _pint free_dlistint and new_Node.|
 |`stack_op.c`|File content function _push _swap _pop _nop sub and add|
+
   
 ![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fstack-in-cpp%2F&psig=AOvVaw2kn1eGsymog0vJlNdPkOLO&ust=1683889036356000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNC5traP7f4CFQAAAAAdAAAAABAR](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2019/06/pictorial-representation-of-stack.png)
 --- 
