@@ -13,7 +13,7 @@ stack_t *new_Node(int n)
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
+		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 	new->n = n;
@@ -56,7 +56,7 @@ void _pall(stack_t **stack, unsigned int n)
 
 	while (current != NULL)
 	{
-		fprintf(stderr, "%d\n", current->n);
+		dprintf(STDOUT_FILENO, "%d\n", current->n);
 		current = current->next;
 	}
 }
@@ -66,7 +66,6 @@ void _pall(stack_t **stack, unsigned int n)
  * @stack: Head node.
  * Return: Nothing.
  */
-
 void free_dlistint(stack_t *stack)
 {
 	stack_t *current = NULL;
@@ -85,15 +84,14 @@ void free_dlistint(stack_t *stack)
  * @stack: Stack list
  * @line_number: Number of the line
  */
-
 void _pint(stack_t **stack, unsigned int line_number)
 {
 	if (!*stack || !stack)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+		dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n", line_number);
 		cleanStack(stack);
 		exit(EXIT_FAILURE);
 	}
 	else
-		fprintf(stderr, "%d\n", (*stack)->n);
+		dprintf(STDOUT_FILENO, "%d\n", (*stack)->n);
 }
