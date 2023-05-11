@@ -40,7 +40,6 @@ Error Handling
     function1.c: Contains functions for push, pall, pint, free_dlistint and new_Node.
     function2.c: Contains functions for swap, pop, add, sub and nop.
     
- 512 × 333
 --- 
 ## Requirements :
 
