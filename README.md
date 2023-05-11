@@ -1,8 +1,8 @@
 ![image](https://github.com/hug0-cstrs/holbertonschool-monty/assets/124585936/84c7ae82-e546-4fab-9576-5482bd422cb5)
 ---
-# Monty bytecode interpreter
+# C - Stacks, Queues - LIFO, FIFO
 ---
-## Project : C - Stacks, Queues - LIFO, FIFO
+# Monty interpreter
 ---
 ## Description :
 
@@ -31,6 +31,12 @@ cleanStack()	Cleans up the stack in case of an error
 handle_command()	Handles the commands in the bytecode file
 Error Handling
 
+|**Filename**|**Description**|
+|:------|:------:|
+|`calculte.c`|File containing function calculate|
+|`free.c`|File which content functions to handle frees|
+|`handle.error.c`|File content function to handle errors|
+|`help.c`|File
     monty.h: Header file containing function prototypes, structs and libraries.
     monty.c: Entry point for the program. Reads the contents of the file passed as an argument and executes the commands.
     function1.c: Contains functions for push, pall, pint, free_dlistint and new_Node.
