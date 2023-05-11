@@ -37,15 +37,12 @@ Error Handling
 |`free.c`|File which content functions to handle frees|
 |`handle.error.c`|File content function to handle errors|
 |`help.c`|File content isdigit function|
-|`monty.C`|File content of global variable and handle_command function|
-|`monty.h`|File content include ,prototype and struct|
+|`monty.C`|Entry point for the program. Reads the contents of the file passed as an argument and executes the commands.|
+|`monty.h`|Header file containing function prototypes, structs and libraries.t|
 |`opcode_struct.c`|File content struct get_opc|
-|`print_opcode.C`|File content gestion _pall and _pint|
-|`stack_op.c`|File content gestion _push _swap _pop and _nop|
-    monty.h: Header file containing function prototypes, structs and libraries.
-    monty.c: Entry point for the program. Reads the contents of the file passed as an argument and executes the commands.
-    function1.c: Contains functions for push, pall, pint, free_dlistint and new_Node.
-    function2.c: Contains functions for swap, pop, add, sub and nop.
+|`print_opcode.C`|File content function _pall and _pint free_dlistint and new_Node.|
+|`stack_op.c`|File content function _push _swap _pop _nop sub and add|
+  
 ![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fstack-in-cpp%2F&psig=AOvVaw2kn1eGsymog0vJlNdPkOLO&ust=1683889036356000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNC5traP7f4CFQAAAAAdAAAAABAR](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2019/06/pictorial-representation-of-stack.png)
 --- 
 ## Requirements :
