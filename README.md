@@ -88,6 +88,4 @@ julien@ubuntu:~/monty$
 
 * **[Hugo Castéras](https://github.com/hug0-cstrs)**
 
-Alexis Grandjean <6267@holbertonstudents.com> [https://github.com/sixen31]
-
-lien github projet : https://github.com/hug0-cstrs/holbertonschool-monty
+* **Alexis Grandjean(https://github.com/sixen31)
