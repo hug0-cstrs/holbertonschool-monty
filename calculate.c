@@ -91,7 +91,7 @@ void _mul(stack_t **stack, unsigned int line_number)
 		cleanStack(stack);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	current = *stack;
 	mul = current->next->n * current->n;
 	current->next->n = mul;

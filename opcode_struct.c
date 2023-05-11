@@ -26,32 +26,27 @@ int get_opc(stack_t **stack, char *arg, char *item, int count)
 	    {"mod", _mod},
 	    {"pstr", _pstr},
 	    {"pchar", _pchar},
-	    {NULL, NULL}
-	};
+	    {NULL, NULL}};
 	/* Parcours le tableau des opcodes pour trouver le bon opcode */
 	while (op[i].opcode)
-	{	/* Compare l'opcode actuel avec celui en argument */
+	{ /* Compare l'opcode actuel avec celui en argument */
 		if (!strcmp(arg, op[i].opcode))
 		{
 			if (!strcmp(arg, "push")) /* Si l'opcode est "push" */
-			{	/* Vérifie si le deuxième argument est un nombre */
+			{			  /* Vérifie si le deuxième argument est un nombre */
 				if (_isdigit(item) == 1)
 					value = atoi(item); /*Convertit item en entier et stocke la dans 'value'*/
 				else
-					return (1);/*signale une erreur si le 2ème argument n'est pas un nombre*/
+					return (1);
+				/*signale une erreur si le 2ème argument n'est pas un nombre*/
 			}
-
-			/**
-			 * Appelle la fonction correspondante de l'opcode
-			 * et passe la pile/queue et le numéro de ligne en arguments
-			 */
 			op[i].f(stack, (unsigned int)count);
 			break; /* Sort de la boucle après avoir exécuté l'opcode */
 		}
 		i++;
 	}
-	if (!op[i].opcode)  /* Si l'opcode n'a pas été trouvé dans le tableau */
-		return (2); /* Retourne 2 pour signaler une erreur */
+	/* Si l'opcode n'a pas été trouvé dans le tableau */
+	if (!op[i].opcode)
+		return (2);
 	return (0);
 }
-
