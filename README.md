@@ -88,4 +88,4 @@ julien@ubuntu:~/monty$
 
 * **[Hugo Castéras](https://github.com/hug0-cstrs)**
 
-* **Alexis Grandjean(https://github.com/sixen31)
+* **[Alexis Grandjean](https://github.com/sixen31)**
