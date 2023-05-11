@@ -55,7 +55,7 @@ void _div(stack_t **stack, unsigned int line_number)
 	stack_t *current = NULL;
 	int div = 0;
 
-	if (!stack || !(*stack)->next)
+	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
 		cleanStack(stack);
