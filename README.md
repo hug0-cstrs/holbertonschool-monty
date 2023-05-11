@@ -36,7 +36,12 @@ Error Handling
 |`calculte.c`|File containing function calculate|
 |`free.c`|File which content functions to handle frees|
 |`handle.error.c`|File content function to handle errors|
-|`help.c`|File
+|`help.c`|File content isdigit function|
+|`monty.C`|File content of global variable and handle_command function|
+|`monty.h`|File content include ,prototype and struct|
+|`opcode_struct.c`|File content struct get_opc|
+|`print_opcode.C`|File content gestion _pall and _pint|
+|`stack_op.c`|File content gestion _push _swap _pop and _nop|
     monty.h: Header file containing function prototypes, structs and libraries.
     monty.c: Entry point for the program. Reads the contents of the file passed as an argument and executes the commands.
     function1.c: Contains functions for push, pall, pint, free_dlistint and new_Node.
