@@ -39,7 +39,7 @@ Error Handling
     monty.c: Entry point for the program. Reads the contents of the file passed as an argument and executes the commands.
     function1.c: Contains functions for push, pall, pint, free_dlistint and new_Node.
     function2.c: Contains functions for swap, pop, add, sub and nop.
-!https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fstack-in-cpp%2F&psig=AOvVaw2kn1eGsymog0vJlNdPkOLO&ust=1683889036356000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNC5traP7f4CFQAAAAAdAAAAABAR
+![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fstack-in-cpp%2F&psig=AOvVaw2kn1eGsymog0vJlNdPkOLO&ust=1683889036356000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNC5traP7f4CFQAAAAAdAAAAABAR](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2019/06/pictorial-representation-of-stack.png)
 --- 
 ## Requirements :
 
