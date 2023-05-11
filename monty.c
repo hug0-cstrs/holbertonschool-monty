@@ -45,7 +45,7 @@ void handle_command(char *argv)
 				free(arguments);
 				continue;
 			}
-			else if (*arguments == '$') /* Ignore les commentaires */
+			else if ((*arguments == '$') || (*arguments == '#')) /* Ignore les commentaires */
 				continue;
 			item = strtok(NULL, " $\n"); /*Récupère le 2ème argument de la ligne*/
 			result = get_opc(&stack, arguments, item, count);
