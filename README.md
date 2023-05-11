@@ -40,8 +40,7 @@ Error Handling
     function1.c: Contains functions for push, pall, pint, free_dlistint and new_Node.
     function2.c: Contains functions for swap, pop, add, sub and nop.
     
- https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fwp-content%2Fqa%2Fuploads%2F2019%2F06%2Fpictorial-representation-of-stack.png&tbnid=GCT9MTxW8K4o7M&vet=12ahUKEwjjlYzQje3-AhW1rycCHeQODLsQMygGegUIARDGAQ..i&imgrefurl=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fstack-in-cpp%2F&docid=6iSJXZpGbCyUEM&w=512&h=333&q=image%20stack%20en%20c&client=firefox-b-d&ved=2ahUKEwjjlYzQje3-AhW1rycCHeQODLsQMygGegUIARDGAQ
- 
+ 512 × 333
 --- 
 ## Requirements :
 
