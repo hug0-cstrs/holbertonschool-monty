@@ -5,6 +5,7 @@
  * @stack: Stack
  * @line_number: Number of the line
  */
+
 void _swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = *stack;
@@ -20,11 +21,13 @@ void _swap(stack_t **stack, unsigned int line_number)
 	current->n = current->next->n;
 	current->next->n = temp;
 }
+
 /**
  * _pop - removes the top element of the stack.
  * @stack: Stack list
  * @line_number: Number of the line
  */
+
 void _pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = NULL;
@@ -43,11 +46,13 @@ void _pop(stack_t **stack, unsigned int line_number)
 		current->next->prev = current->prev;
 	free(current);
 }
+
 /**
  * _add - function add two integer
  * @stack: Stack list
  * @line_number: Number of the line
  */
+
 void _add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = NULL;
@@ -70,6 +75,7 @@ void _add(stack_t **stack, unsigned int line_number)
  * @stack: Stack list
  * @line_number: Number of the line
  */
+
 void _nop(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
