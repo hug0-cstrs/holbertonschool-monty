@@ -64,5 +64,5 @@ void _pchar(stack_t **stack, unsigned int line_number)
 	}
 
 	putchar(num);
-	putchar('\n');
+	putchar(10);
 }
