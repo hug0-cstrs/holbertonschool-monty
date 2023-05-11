@@ -54,19 +54,17 @@ void _pchar(stack_t **stack, unsigned int line_number)
 		cleanStack(stack);
 		exit(EXIT_FAILURE);
 	}
-	num = (*stack)->n;
 
+	num = (*stack)->n;
 	if (num < 0 || num > 127)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 		cleanStack(stack);
 		exit(EXIT_FAILURE);
 	}
-
 	putchar(num);
 	putchar(10);
 }
-
 /**
  * _pstr - prints the string starting at the top of the stack
  * of the stack by the top element of the stack
@@ -76,17 +74,15 @@ void _pchar(stack_t **stack, unsigned int line_number)
 
 void _pstr(stack_t **stack, unsigned int line_number)
 {
-	stack_t *current = NULL;
+	stack_t *current = *stack;
 	(void)line_number;
 
-	current = *stack;
-	while(current && current->next)
+	while (current && current->n)
 	{
 		if (current->n < 32 || current->n > 127)
 			break;
 		printf("%c", current->n);
 		current = current->next;
 	}
-
-	putchar('\n');
+	putchar(10);
 }
