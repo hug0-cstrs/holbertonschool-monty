@@ -26,6 +26,8 @@ int get_opc(stack_t **stack, char *arg, char *item, int count)
 	    {"mod", _mod},
 	    {"pstr", _pstr},
 	    {"pchar", _pchar},
+	    {"rotl", _rotl},
+	    {"rotr", _rotr},
 	    {NULL, NULL}};
 	/* Parcours le tableau des opcodes pour trouver le bon opcode */
 	while (op[i].opcode)
