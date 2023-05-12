@@ -29,7 +29,6 @@ int get_opc(stack_t **stack, char *arg, char *item, int count)
 	    {"rotl", _rotl},
 	    {"rotr", _rotr},
 	    {NULL, NULL}};
-	/* Parcours le tableau des opcodes pour trouver le bon opcode */
 	while (op[i].opcode)
 	{ /* Compare l'opcode actuel avec celui en argument */
 		if (!strcmp(arg, op[i].opcode))
@@ -39,8 +38,7 @@ int get_opc(stack_t **stack, char *arg, char *item, int count)
 				if (_isdigit(item) == 1)
 					value = atoi(item); /*Convertit item en entier et stocke la dans 'value'*/
 				else
-					return (1);
-				/*signale une erreur si le 2ème argument n'est pas un nombre*/
+					return (1);/*signale une erreur si le 2ème argument n'est pas un nombre*/
 			}
 			op[i].f(stack, (unsigned int)count);
 			break; /* Sort de la boucle après avoir exécuté l'opcode */
