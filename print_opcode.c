@@ -46,6 +46,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 
 void _pchar(stack_t **stack, unsigned int line_number)
 {
+	int isNotLetter;
 
 	if (!*stack)
 	{
@@ -53,13 +54,14 @@ void _pchar(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	if (((*stack)->n < 'A' || (*stack)->n > 'Z') &&
-	((*stack)->n < 'a' || (*stack)->n > 'z'))
+	isNotLetter = ((*stack)->n < 'A' || (*stack)->n > 'Z') &&
+		 ((*stack)->n < 'a' || (*stack)->n > 'z');
+	if (isNotLetter)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	printf("%c\n", (*stack)->n);
+	printf("%c\n", (char)(*stack)->n);
 }
 
 /**
