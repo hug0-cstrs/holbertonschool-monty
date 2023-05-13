@@ -46,24 +46,20 @@ void _pint(stack_t **stack, unsigned int line_number)
 
 void _pchar(stack_t **stack, unsigned int line_number)
 {
-	int num = 0;
 
-	if (!*stack || !stack)
+	if (!*stack)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
-		cleanStack(stack);
 		exit(EXIT_FAILURE);
 	}
 
-	num = (*stack)->n;
-	if (num < 0 || num > 127)
+	if (((*stack)->n < 'A' || (*stack)->n > 'Z') &&
+	((*stack)->n < 'a' || (*stack)->n > 'z'))
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
-		cleanStack(stack);
 		exit(EXIT_FAILURE);
 	}
-	putchar(num);
-	putchar('\n');
+	printf("%c\n", (*stack)->n);
 }
 
 /**
