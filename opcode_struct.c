@@ -24,8 +24,8 @@ int get_opc(stack_t **stack, char *arg, char *item, int count)
 	    {"div", _div},
 	    {"mul", _mul},
 	    {"mod", _mod},
-	    {"pstr", _pstr},
 	    {"pchar", _pchar},
+	    {"pstr", _pstr},
 	    {"rotl", _rotl},
 	    {"rotr", _rotr},
 	    {NULL, NULL}};
