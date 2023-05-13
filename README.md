@@ -1,4 +1,4 @@
-![image](https://github.com/hug0-cstrs/holbertonschool-monty/assets/124585936/84c7ae82-e546-4fab-9576-5482bd422cb5)
+![holberton](https://blog.holbertonschool.com/wp-content/uploads/2022/01/Capture-decran-2022-01-11-172847.png)
 ---
 # C - Stacks, Queues - LIFO, FIFO
 ---
@@ -31,21 +31,25 @@ cleanStack()	Cleans up the stack in case of an error
 handle_command()	Handles the commands in the bytecode file
 Error Handling
 
-
+### Representation of the Stack :
+![push](http://www.sitesbay.com/data-structure/images/push-operation.gif) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+![pop](http://www.sitesbay.com/data-structure/images/pop-operation.gif)
+### Representation of the Queue :
+![enqueue](http://www.sitesbay.com/data-structure/images/queue-insert-item.gif) <br>
+![dequeue](http://www.sitesbay.com/data-structure/images/queue-delete-item.gif)
 |**Filename**|**Description**|
 |:------|:------:|
 |`calculte.c`|File containing function calculate|
-|`free.c`|File which content functions to handle frees|
-|`handle.error.c`|File content function to handle errors|
-|`help.c`|File content isdigit function|
-|`monty.C`|Entry point for the program. Reads the contents of the file passed as an argument and executes the commands.|
+|`free.c`|File which containing functions to handle frees|
+|`handle.error.c`|File containing functions to handle errors|
+|`help.c`|File containing isdigit function|
+|`monty.C`|Entry point for the program. Reads the contents of the file passed as an argument and executes the commands|
 |`monty.h`|Header file containing function prototypes, structs and libraries.t|
-|`opcode_struct.c`|File content struct get_opc|
-|`print_opcode.C`|File content function _pall and _pint|
+|`opcode_struct.c`|File containing struct get_opc|
+|`print_opcode.C`|File containing function pall and _pint|
+|`rotate.c`|file containing the _rolt and _rort functions that allow to run the stack|
 |`stack_op.c`|File content function _push _swap _pop _nop new_Node|
 
-  
-![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fstack-in-cpp%2F&psig=AOvVaw2kn1eGsymog0vJlNdPkOLO&ust=1683889036356000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNC5traP7f4CFQAAAAAdAAAAABAR](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2019/06/pictorial-representation-of-stack.png)
 --- 
 ## Requirements :
 
